@@ -82,7 +82,9 @@
               "127.0.0.1",
               "app",
               ".app",
-              "host.docker.internal"
+              "host.docker.internal",
+              ".app.github.dev",
+              ".github.dev"
             ]
           },
           "configurations": {
