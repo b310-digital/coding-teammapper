@@ -22,6 +22,62 @@
       "docker *": "deny",
       "docker-compose": "deny",
       "docker-compose *": "deny"
+    },
+    "read": {
+      "~/.config/**": "deny",
+      "~/.ssh/**": "deny",
+      "~/.aws/**": "deny",
+      "~/.gnupg/**": "deny",
+      "~/.kube/**": "deny",
+      "~/.docker/**": "deny",
+      "~/.azure/**": "deny",
+      "~/.netrc": "deny",
+      "~/.npmrc": "deny",
+      "~/.git-credentials": "deny",
+      "/workspaces/.codespaces/**": "deny"
+    },
+    "list": {
+      "~/.config/**": "deny",
+      "~/.ssh/**": "deny",
+      "~/.aws/**": "deny",
+      "~/.gnupg/**": "deny",
+      "~/.kube/**": "deny",
+      "~/.docker/**": "deny",
+      "~/.azure/**": "deny",
+      "/workspaces/.codespaces/**": "deny"
+    },
+    "glob": {
+      "~/.config/**": "deny",
+      "~/.ssh/**": "deny",
+      "~/.aws/**": "deny",
+      "~/.gnupg/**": "deny",
+      "~/.kube/**": "deny",
+      "~/.docker/**": "deny",
+      "~/.azure/**": "deny",
+      "/workspaces/.codespaces/**": "deny"
+    },
+    "grep": {
+      "~/.config/**": "deny",
+      "~/.ssh/**": "deny",
+      "~/.aws/**": "deny",
+      "~/.gnupg/**": "deny",
+      "~/.kube/**": "deny",
+      "~/.docker/**": "deny",
+      "~/.azure/**": "deny",
+      "/workspaces/.codespaces/**": "deny"
+    },
+    "edit": {
+      "~/.config/**": "deny",
+      "~/.ssh/**": "deny",
+      "~/.aws/**": "deny",
+      "~/.gnupg/**": "deny",
+      "~/.kube/**": "deny",
+      "~/.docker/**": "deny",
+      "~/.azure/**": "deny",
+      "~/.netrc": "deny",
+      "~/.npmrc": "deny",
+      "~/.git-credentials": "deny",
+      "/workspaces/.codespaces/**": "deny"
     }
   }
 }

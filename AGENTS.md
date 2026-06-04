@@ -14,6 +14,16 @@ If you are inside a GitHub Codespace (e.g. `opencode` running in the Codespace t
 - Postgres is available as a sidecar at host `postgres:5432` (configured in `.devcontainer/docker-compose.yml`); the backend already points at it via env vars.
 - The Playwright MCP / multi-container networking notes below **do not apply** in Codespaces.
 
+#### Off-limits paths (secrets)
+
+Do **not** read, list, search, or edit sensitive folders outside the workspace — they hold credentials (opencode auth, `gh`/cloud tokens, SSH keys), not project code. This is enforced via `deny` rules in `opencode.json` (`permission.read`/`list`/`glob`/`grep`/`edit`), but treat it as a hard rule regardless:
+
+- `~/.config/**` (includes opencode auth and `gh` credentials), `~/.ssh/**`, `~/.aws/**`, `~/.azure/**`, `~/.gnupg/**`, `~/.kube/**`, `~/.docker/**`
+- `~/.netrc`, `~/.npmrc`, `~/.git-credentials`
+- `/workspaces/.codespaces/**` (Codespaces-injected secrets/config)
+
+If you genuinely need a value from one of these (e.g. a token), ask the user rather than reading the file. When adding tooling, keep secrets in env vars — never copy them into the workspace.
+
 ### Local docker-compose (multi-container)
 
 The Docker-based setup below (app + chrome + playwright + postgres containers) applies only to local development with `docker-compose`, **not** to Codespaces.
