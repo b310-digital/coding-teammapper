@@ -8,7 +8,6 @@ services:
     stdin_open: true
     environment:
       MODE: DEV
-      BINDING: "0.0.0.0"
       POSTGRES_DATABASE: ${POSTGRES_DB:-teammapper-backend-dev}
       POSTGRES_HOST: ${POSTGRES_HOST:-postgres}
       POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-teammapper-password}

@@ -8,7 +8,6 @@ services:
       target: production
     environment:
       MODE: ${PROD_MODE:-DEV}
-      BINDING: "0.0.0.0"
       POSTGRES_DATABASE: ${POSTGRES_PROD_DB}
       POSTGRES_HOST: ${POSTGRES_PROD_HOST:-postgres_prod}
       POSTGRES_PASSWORD: ${POSTGRES_PROD_PASSWORD}

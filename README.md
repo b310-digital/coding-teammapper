@@ -38,7 +38,6 @@ services:
     image: ghcr.io/b310-digital/teammapper:latest
     environment:
       MODE: PROD
-      BINDING: "0.0.0.0"
       POSTGRES_DATABASE: teammapper-db
       POSTGRES_HOST: postgres_prod
       POSTGRES_PASSWORD:
