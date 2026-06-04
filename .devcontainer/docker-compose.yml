@@ -8,7 +8,11 @@ services:
       - ..:/workspaces/teammapper:cached
     environment:
       MODE: DEV
-      BINDING: "0.0.0.0"
+      # Bind the Angular dev server dual-stack (IPv6 + IPv4). The Codespaces port
+      # forwarder reaches the app over IPv6 loopback (::1); an IPv4-only "0.0.0.0"
+      # bind refuses that connection and the forwarded URL returns 502. "::" matches
+      # the backend, which already listens dual-stack via Node's default.
+      BINDING: "::"
       POSTGRES_HOST: postgres
       POSTGRES_PORT: "5432"
       POSTGRES_USER: teammapper-user
